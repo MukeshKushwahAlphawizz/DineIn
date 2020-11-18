@@ -1,0 +1,147 @@
+<ion-header class="header top-header">
+  <ion-navbar>
+    <ion-buttons class="back-btn">
+      <button class="text-white" ion-button icon-only (click)="back()">
+        <img src="assets/img/left-arrow.png"> Back
+      </button>
+    </ion-buttons>
+    <ion-buttons right (click)="map()">
+      <button ion-button icon-only class="text-white">
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right margin-left class="notification_icn">
+      <button ion-button icon-only light class="text-white" (click)="notifications()">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <span class="red-dot"></span>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar placeholder="Search..."></ion-searchbar>
+</ion-header>
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-row class="top_btn">
+    <ion-col col-4>
+      <button (click)="getAllRestaurantList('popular',1,true)" [ngClass]="type==='popular'?'focus':''" class="small-font" full ion-button round>Most Popular</button>
+    </ion-col>
+    <ion-col col-4>
+      <button (click)="getAllRestaurantList('recent',1,true)" [ngClass]="type==='recent'?'focus':''" class="small-font" full ion-button round>Most Trending</button>
+    </ion-col>
+    <ion-col col-4>
+      <button (click)="getAllRestaurantList('nearby',1,true)" [ngClass]="type==='nearby'?'focus':''" class="small-font" full ion-button round>Promotions</button>
+    </ion-col>
+  </ion-row>
+
+  <div text-center class="no-data" *ngIf="isListEmpty">No Restaurants are available</div>
+  <div *ngIf="!isListEmpty">
+    <ion-card *ngFor="let item of restaurantList" margin-bottom no-margin class="dish-list" (click)="openDetails(item)">
+      <img [src]="item.image&& item.image !==''?baseUrl+item.image:'assets/img/food1.png'">
+      <ion-card-content>
+        <ion-row>
+          <ion-col col-8>
+            <h2 class="medium-text">{{item.restaurant_name}}</h2>
+            <p class="text-grey">{{item.address}}</p>
+          </ion-col>
+          <ion-col text-right>
+            <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                                readonly="true"
+                                rating="{{item.rating}}">
+            </ionic3-star-rating>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-8 class="small-text">
+            {{item.distance}} Away Form Your Location
+          </ion-col>
+          <ion-col text-right>
+            <p class="text-grey">Open {{item.open_time}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <!--<ion-card margin-bottom no-margin class="dish-list" (click)="openDetails()">
+    <img src="assets/img/food2.png">
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-8>
+          <h2 class="medium-text">Ajegunle Finest chao!</h2>
+          <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+        </ion-col>
+        <ion-col text-right>
+          <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                              readonly="true"
+                              rating="3">
+          </ionic3-star-rating>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-8 class="small-text">
+          3 Km Away Form Your Location
+        </ion-col>
+        <ion-col text-right>
+          <p class="text-grey">Open 8:00 AM</p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card margin-bottom no-margin class="dish-list" (click)="openDetails()">
+    <img src="assets/img/food3.png">
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-8>
+          <h2 class="medium-text">Ajegunle Finest chao!</h2>
+          <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+        </ion-col>
+        <ion-col text-right>
+          <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                              readonly="true"
+                              rating="3">
+          </ionic3-star-rating>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-8 class="small-text">
+          3 Km Away Form Your Location
+        </ion-col>
+        <ion-col text-right>
+          <p class="text-grey">Open 8:00 AM</p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card margin-bottom no-margin class="dish-list" (click)="openDetails()">
+    <img src="assets/img/food1.png">
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-8>
+          <h2 class="medium-text">Ajegunle Finest chao!</h2>
+          <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+        </ion-col>
+        <ion-col text-right>
+          <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                              readonly="true"
+                              rating="3">
+          </ionic3-star-rating>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-8 class="small-text">
+          3 Km Away Form Your Location
+        </ion-col>
+        <ion-col text-right>
+          <p class="text-grey">Open 8:00 AM</p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>-->
+</ion-content>

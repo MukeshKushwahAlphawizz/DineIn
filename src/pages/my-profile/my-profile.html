@@ -1,0 +1,78 @@
+<ion-header class="header top-header">
+  <ion-navbar>
+    <ion-title>My Profile</ion-title>
+    <ion-buttons right (click)="notifications()">
+        <button  ion-button icon-only light>
+            <ion-icon  name="notifications"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="my-profile">
+
+  <div class="user_dtls" margin-bottom>
+      <ion-card class="redius-10">
+          <ion-list >
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img [src]="userData.user_image!==''?userData.user_image:'assets/img/user_profile.png'">
+                </ion-thumbnail>
+                <h2 class="bold">{{userData.user_fullname}}
+                <button ion-button clear item-end class="text-lime" (click)="edit_prfl()"> <ion-icon name="md-create"></ion-icon></button></h2>
+                <p>{{userData.user_email}}</p>
+              </ion-item>
+          </ion-list>
+         </ion-card>
+  </div>
+
+
+    <ion-card class="dtls_list redius-10" padding-left padding-right>
+        <ion-list>
+            <ion-item class="bold">
+                 Payment
+                <p>Add a credit or Dabit card</p>
+              <img item-end src="assets/img/right_arrow.png">
+             </ion-item>
+
+            <ion-item class="bold">
+                Address
+                <p>Add or Remove delivery address</p>
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+
+            <ion-item class="bold">
+                Subscription
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+
+            <ion-item class="bold fb_icn">
+                <ion-icon name="logo-facebook" item-start large class="text-fb"></ion-icon>
+                view Facebook Profile
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+
+            <ion-item class="bold">
+                <ion-icon name="md-star-outline" class="text-lime"></ion-icon>
+                Order History
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+
+            <ion-item class="bold" (click)="Setting()">
+                <ion-icon name="md-settings" class="text-lime"></ion-icon>
+                Settings
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+
+            <ion-item class="bold" (click)="Privacy()">
+                <ion-icon name="md-document" class="text-lime"></ion-icon>
+                Privacy Policy
+                <img item-end src="assets/img/right_arrow.png">
+            </ion-item>
+      </ion-list>
+      </ion-card>
+      <div margin text-center>
+          <button ion-button color="danger" clear>Logout</button>
+      </div>
+
+</ion-content>

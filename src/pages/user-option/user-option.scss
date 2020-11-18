@@ -1,0 +1,73 @@
+page-user-option {
+    .main-bg{
+        background-image: url(../assets/img/Home-bg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .main-box {
+        margin-top: 55pt;
+    }
+    .logo_img{
+        width: 35%;
+    }
+    .dine_in_btn1, .dine_in_btn2, .dine_in_btn3{
+        background: #fff;
+        border-radius: 7px;
+    }
+    .focus{
+        background: #D6DB46;
+    }
+    .dine_in_btn1 img, .dine_in_btn2 img{
+        width: 25pt;
+    }
+    .dine_in_btn3 img{
+        width: 9pt;
+    }
+    .dine_in_btn1>div, .dine_in_btn2>div, .dine_in_btn3>div {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+  .option-bg{
+    background: url('../assets/imgs/card.png');
+    background-size: 100% auto;
+    width: 145px;
+    height: auto;
+    padding: 12pt 0 5pt 0;
+    margin-left: 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+  }
+  .lang-bg{
+    background: url('../assets/imgs/card.png');
+    background-size: 100% auto;
+    right: 5px;
+    width: 145px;
+    height: auto;
+    padding: 12pt 0 5pt 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+  }
+  .list-icon{
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  ion-item{
+    background: transparent!important;
+  }
+  .item [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end]{
+    margin: 0 !important;
+  }
+  .item.item-block .item-inner{
+    padding-right: 0 !important;
+  }
+  .arrow{
+    font-weight: bold;font-size: 1.4rem;
+    padding-top: 6pt;
+  }
+  .language-img{
+    width: 15pt;padding-right: 5px !important;
+  }
+}

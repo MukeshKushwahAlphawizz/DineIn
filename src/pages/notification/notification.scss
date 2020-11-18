@@ -1,0 +1,22 @@
+page-notification {
+    .notifications button {
+        font-size: 8pt;
+        font-weight: normal;
+      border-radius: 5px;
+    }
+    .accept {
+        background: #26975A;
+    }
+  .reject {
+        background: red;
+    }
+  .right-margin{
+    margin-right: 45pt;
+  }
+  .set-saperator{
+    height: 1px;
+    width: 70%;
+    background: #E0E0E0;
+    margin: 10pt auto;
+  }
+}

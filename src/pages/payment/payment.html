@@ -1,0 +1,57 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="top-header">
+  <ion-navbar>
+    <ion-title text-center>Split Order</ion-title>
+    <ion-buttons right class="hide_icn">
+        <button  ion-button>
+            <ion-icon name="notifications"></ion-icon>
+        </button>
+  </ion-buttons> 
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+    <ion-list radio-group padding>     
+        
+        <ion-card margin-bottom class="btn-border">
+          <ion-item>
+            <ion-radio item-start value="Apple"></ion-radio>
+            <ion-label>Apple</ion-label>
+            <ion-icon item-end name="logo-apple"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+      <ion-card margin-bottom class="btn-border">
+          <ion-item>
+              <ion-radio item-start value="Dabit"></ion-radio>
+            <ion-label>Add Dabit/ Credit Card</ion-label> 
+            <ion-icon item-end name="md-card"></ion-icon>
+
+          </ion-item>
+        </ion-card>
+
+      <ion-card margin-bottom class="btn-border">
+          <ion-item>
+            <ion-radio checked="true" item-start value="Case"></ion-radio>
+            <ion-label>Pay Case</ion-label> 
+            <!-- <ion-icon  name="md-cash"></ion-icon> -->
+            <img item-end src="assets/img/cashapp.png">
+          </ion-item>
+      </ion-card>
+       
+    </ion-list>
+
+    <ion-footer padding>
+      <div>
+        <button (click)="Reservation()" class="lime_btn" full ion-button>Coutiune</button>        
+      </div>
+    </ion-footer>
+
+</ion-content>

@@ -1,0 +1,87 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="header top-header">
+
+    <ion-navbar>
+        <ion-buttons right margin-left class="notification_icn">
+            <button ion-button icon-only light class="text-white">
+              <ion-icon name="notifications"></ion-icon>
+            </button>
+            <span class="red-dot"></span>
+          </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding margin-top class="edit-profile">
+  <form [formGroup]="editForm">
+    <ion-list>
+      <div margin-top class="upload_prfl" text-center>
+        <img src="assets/img/dummy-profile.png">
+        <p>Change Profile Photo</p>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label stacked class="text-lime">Full Name</ion-label>
+        <ion-input formControlName="fullName" type="text"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.fullName">
+          <div class="error-message" *ngIf="editForm.get('fullName').hasError(error.type) &&
+                (editForm.get('fullName').dirty || editForm.get('fullName').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label stacked class="text-lime">Email Address</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="editForm.get('email').hasError(error.type) &&
+                (editForm.get('email').dirty || editForm.get('email').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding>
+        <ion-label stacked class="text-lime">Mobile No.</ion-label>
+        <ion-input formControlName="mobileNumber" type="number"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.mobileNumber">
+          <div class="error-message"
+               *ngIf="editForm.get('mobileNumber').hasError(error.type) &&
+                (editForm.get('mobileNumber').dirty || editForm.get('mobileNumber').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item no-padding margin-bottom>
+        <ion-label stacked class="text-lime">Info</ion-label>
+        <ion-input formControlName="info" type="text"></ion-input>
+      </ion-item>
+      <div>
+        <ng-container *ngFor="let error of error_messages.info">
+          <div class="error-message"
+               *ngIf="editForm.get('info').hasError(error.type) &&
+                (editForm.get('info').dirty || editForm.get('info').touched)">
+            {{ error.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <div padding-top margin-top text-center class="sign-btn">
+        <button (click)="editProfile()" [disabled]="editForm.invalid" ion-button block class="lime_btn">Save and Exit</button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

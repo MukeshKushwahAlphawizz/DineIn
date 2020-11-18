@@ -1,0 +1,25 @@
+page-open-table {
+    .feedback_btn {
+        font-size: 7pt;
+        background: #7DDB46;
+        padding: 8pt 11pt;
+        height: auto;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .open_tbl p {
+        display: inline-block;
+        font-size: 8pt;
+        font-weight: bold;
+        color: #000;
+        margin-right: 15px;
+    }    
+    h2.bold {
+        font-weight: 500;
+        color: #19315B;
+        margin-bottom: 5px;
+    }    
+    .top-header .toolbar-title {
+        text-transform: initial;
+    }
+}

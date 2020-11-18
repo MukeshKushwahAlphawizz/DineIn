@@ -1,0 +1,82 @@
+<ion-content no-padding class="main-bg">
+  <!--<ion-grid>
+      <ion-row>
+          <ion-col no-padding class="order-option" col-5>
+              <ion-item no-padding>
+                  &lt;!&ndash; <ion-label> <ion-icon name="ios-list"></ion-icon> </ion-label> &ndash;&gt;
+                  <ion-label><ion-icon name="ios-list"></ion-icon>Select Option</ion-label>
+                  <ion-select (ionChange)="select($event)" interface="popover">
+                      &lt;!&ndash; <ion-option>Select Option</ion-option> &ndash;&gt;
+                      <ion-option value="Split Order">Split Order</ion-option>
+                      <ion-option value="Open Bill">Open Bill</ion-option>
+                      <ion-option value="Check On Items">Check On Items</ion-option>
+                      <ion-option value="Pay">Pay</ion-option>
+                  </ion-select>
+              </ion-item>
+          </ion-col>
+          <ion-col col-2></ion-col>
+          <ion-col no-padding col-5 class="language" text-right>
+                  <ion-item no-padding>
+                     <ion-label no-margin><img src="assets/img/language.png"> Language</ion-label>
+                            <ion-select no-padding>
+                                <ion-option  value="English">English</ion-option>
+                                <ion-option  value="Arabic">Arabic</ion-option>
+                            </ion-select>
+                    </ion-item>
+          </ion-col>
+      </ion-row>
+  </ion-grid>-->
+  <div style="margin: 13pt 10pt 0 10pt">
+    <ion-item no-padding no-lines>
+      <ion-item no-lines no-padding item-left (click)="isOption = !isOption">
+        <ion-icon item-left class="list-icon text-white" name="ios-list"></ion-icon>
+        <div class="text-white small-font" item-start>Select Option</div>
+        <ion-icon item-right class="arrow text-white" name="{{isOption?'ios-arrow-up':'ios-arrow-down'}}"></ion-icon>
+      </ion-item>
+      <ion-item col-2 no-lines no-padding item-start></ion-item>
+      <ion-item item-right no-lines no-padding item-left (click)="isLanguage = !isLanguage">
+        <img class="language-img" item-left src="assets/img/language.png">
+        <div class="text-white small-text" item-start>Select Language</div>
+        <ion-icon item-right class="arrow text-white" name="{{isLanguage?'ios-arrow-up':'ios-arrow-down'}}"></ion-icon>
+      </ion-item>
+    </ion-item>
+    <div *ngIf="isOption" class="option-bg">
+      <div (click)="select('Split Order')" class="padding-5pt small-text">Split Order</div>
+      <div class="saperator"></div>
+      <div (click)="select('Open Bill')" class="padding-5pt small-text">Open Bill</div>
+      <div class="saperator"></div>
+      <div (click)="select('Check On Items')" class="padding-5pt small-text">Check On Items</div>
+      <div class="saperator"></div>
+      <div (click)="select('Pay')" class="padding-5pt small-text">Pay</div>
+    </div>
+    <div *ngIf="isLanguage" class="lang-bg">
+      <div (click)="selectLang('English')" class="padding-5pt small-text">English</div>
+      <div class="saperator"></div>
+      <div (click)="selectLang('Other')" class="padding-5pt small-text">Other</div>
+    </div>
+  </div>
+<div class="main-box" text-center>
+    <img class="logo_img" src="assets/img/logo.png">
+
+    <ion-row padding>
+      <ion-col>
+        <div (click)="home('dine-in')" [ngClass]="isFocus1?'focus':''"  padding-top padding-bottom class="dine_in_btn1">
+          <img src="assets/img/icon1.png">
+          <div padding-top>Dine In</div>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="home('reservation')" [ngClass]="isFocus2?'focus':''" padding-top padding-bottom class="dine_in_btn2">
+          <img src="assets/img/icon2.png">
+          <div padding-top>Reservation</div>
+        </div>
+      </ion-col>
+      <ion-col>
+          <div (click)="home('on-the-run')" [ngClass]="isFocus3?'focus':''" padding-top padding-bottom class="dine_in_btn3">
+            <img src="assets/img/icon3.png">
+            <div padding-top> On The Run</div>
+          </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

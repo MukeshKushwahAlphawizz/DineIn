@@ -1,0 +1,95 @@
+<!--
+  Generated template for the ReviewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="top-header">
+  <ion-navbar>
+      <!-- <ion-buttons class="back-btn">
+          <button class="text-white" ion-button icon-only (click)="back()">
+            <img src="assets/img/left-arrow.png"> Back
+          </button>
+        </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="main-bg">
+
+    <ion-list padding-top>
+
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/user_profile.png">
+            </ion-avatar>
+            <h2>Finn</h2>
+            <p class="small-text">2 hours ago</p>
+            <div text-right item-end class="given-rating">
+              <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                                  readonly="true"
+                                  rating="4">
+              </ionic3-star-rating>
+            </div>
+            <p>Bespoke service i would recommend this restaurant to every one looking for good quality for the money</p>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/user_profile.png">
+            </ion-avatar>
+            <h2>Finn</h2>
+            <p class="small-text">2 hours ago</p>
+          <div text-right item-end class="given-rating">
+            <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                                readonly="true"
+                                rating="5">
+            </ionic3-star-rating>
+          </div>
+            <p>Bespoke service i would recommend this restaurant to every one looking for good quality for the money</p>
+
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/user_profile.png">
+            </ion-avatar>
+            <h2>Finn</h2>
+            <p class="small-text">2 hours ago</p>
+          <div text-right item-end class="given-rating">
+            <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                                readonly="true"
+                                rating="5">
+            </ionic3-star-rating>
+          </div>
+            <p>Bespoke service i would recommend this restaurant to every one looking for good quality for the money</p>
+        </ion-item>
+
+    </ion-list>
+
+    <div padding class="rating-box">
+        <h5>Write Your Feedback To Restro</h5>
+        <form>
+            <ion-list>
+
+                  <ion-item no-padding class="transparent">
+                    <ion-label stacked class="text-lime">Feedback</ion-label>
+                    <ion-input type="text" placeholder="Write" value="Write"></ion-input>
+                  </ion-item>
+
+                  <div padding-top class="rating-star">
+                      <p class="text-lime">Provide Stars</p>
+                    <ionic3-star-rating activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                                        readonly="false"
+                                        rating="0">
+                    </ionic3-star-rating>
+                  </div>
+
+                  <div padding-top padding-bottom class="">
+                      <button ion-button block color="dark" class="lime_btn">Submit</button>
+                  </div>
+
+              </ion-list>
+          </form>
+    </div>
+</ion-content>

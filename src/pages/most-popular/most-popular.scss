@@ -1,0 +1,28 @@
+page-most-popular {
+    .dish-list h2 {
+        font-weight: bold;
+        margin-bottom: 2pt;
+        font-size: 14pt;
+    }    
+    .dish-list .card-content {
+        padding: 5px 10px;
+    }
+    .top_btn .button {
+        background: #EFEFEF;
+        color: #000;
+        font-weight: bold;
+        font-size: 8pt;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-transform: capitalize;
+    }    
+    .top_btn {
+        padding: 0pt 2pt 5pt;
+    }
+    .small-text{
+        font-weight: 500;
+    }
+    .dish-list{
+        width: 100%;
+    }   
+}

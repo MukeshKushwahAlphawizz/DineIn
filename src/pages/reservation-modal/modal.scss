@@ -1,0 +1,29 @@
+page-modal {
+    .modal { 
+        max-width: 280px;
+        width: 100vw;
+        box-shadow: 0 16px 20px rgba(0, 0, 0, .4);
+        color: black;
+    }
+
+    .content {
+        background-color: #00000070;
+    }
+
+    span.text-right {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .para-text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.2rem;
+    }        
+    .Reservation-popup .feedback_btn img {
+        width: 19pt;
+    }
+    .Reservation-popup img {
+        width: 10pt;
+    }
+}

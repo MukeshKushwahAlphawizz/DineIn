@@ -1,0 +1,13 @@
+page-phone-no {
+    
+    .split-bill-box h2 {
+        font-style: italic;
+        font-weight: bold;
+    }  
+    .split-bill-box .item-block:first-child {
+        border-top: none ;
+    }    
+    .list-md .item-block .item-inner {
+        border-bottom: 1px solid #bdbdbd;
+    }   
+}

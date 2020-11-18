@@ -1,0 +1,52 @@
+<!--
+  Generated template for the RequestFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="header top-header">
+
+    <ion-navbar>
+        <ion-buttons right>
+            <button ion-button icon-only light class="text-white">
+              <ion-icon name="notifications"></ion-icon>
+            </button>
+          </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content class="main-bg">
+
+        <form padding>
+            <ion-list>
+
+                <ion-item no-padding class="transparent">
+                  <ion-label stacked class="text-lime">Full Name</ion-label>
+                  <ion-input type="text" value="Samanth Smith"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding class="transparent">
+                    <ion-label stacked class="text-lime">Mobile No.</ion-label>
+                    <ion-input type="text" placeholder="+91 - 7415228864" value="+91 - 7415228864"></ion-input>
+                  </ion-item>
+
+                  <ion-item no-padding class="transparent">
+                    <ion-label stacked class="text-lime">Gender</ion-label>
+                    <ion-input type="text" value="Male"></ion-input>
+                  </ion-item>
+
+                  <ion-item no-padding class="transparent">
+                    <ion-label stacked class="text-lime">Write Something</ion-label>
+                    <ion-input type="text" value="Write"></ion-input>
+                  </ion-item>
+
+                  <div padding-top padding-bottom class="">
+                      <button (click)="requestSent()" ion-button block color="dark" class="lime_btn">Send Request</button>
+                  </div>
+
+              </ion-list>
+          </form>
+
+</ion-content>

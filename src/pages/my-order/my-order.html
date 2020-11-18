@@ -1,0 +1,131 @@
+<!--
+  Generated template for the MyOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="header top-header">
+  <ion-navbar>
+      <ion-title>My Orders</ion-title>
+
+      <ion-buttons right>
+          <button ion-button icon-only light class="text-white">
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+        </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="my-order">
+      <h6 padding-top>Ongoing</h6>
+      <ion-card no-margin padding class="ongoing resto-list">
+
+          <div text-right class="time_box">
+            <p>2 Hours Ago</p>
+          </div>
+
+          <ion-item no-padding (click)="resto_dtls()">
+            <ion-thumbnail item-start class="resto_img">
+                <img src="assets/img/order-img.png">
+              </ion-thumbnail>
+            <h2>Marty McFly</h2>
+            <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+          </ion-item>
+
+        <ion-item no-lines no-padding>
+          <div item-right>
+            <button small ion-button color="secondary" class="redius shadow open_tbl" (click)="open_table()">Open Table</button>
+            <button small ion-button class="background-lime redius shadow">Checking in</button>
+            <button small ion-button color="danger" class="redius shadow">Cancel Booking</button>
+          </div>
+        </ion-item>
+      </ion-card>
+
+      <h6 padding-top>Past Bookings</h6>
+
+      <ion-card no-margin margin-bottom padding class="resto-list">
+
+          <div text-right class="time_box">
+              <p>2 Weeks Ago</p>
+          </div>
+
+          <ion-item no-padding>
+            <ion-thumbnail item-start class="resto_img">
+              <img src="assets/img/order-img.png">
+            </ion-thumbnail>
+            <h2>Marty McFly</h2>
+            <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+          </ion-item>
+
+
+          <ion-row>
+            <ion-col class="time_box"><p>Time : 8:30 PM</p></ion-col>
+            <ion-col class="time_box"><p>Price : $300</p></ion-col>
+            <ion-col no-padding text-right>
+                <ion-buttons (click)="feedback_btn()">
+                  <button large ion-button class="feedback_btn shadow">
+                    Provide Feedback
+                  </button>
+                </ion-buttons>
+          </ion-col>
+          </ion-row>
+      </ion-card>
+
+      <ion-card no-margin margin-bottom padding class="resto-list">
+
+        <div text-right class="time_box">
+          <p>3 Weeks Ago</p>
+      </div>
+
+          <ion-item no-padding>
+            <ion-thumbnail item-start class="resto_img">
+              <img src="assets/img/order-img.png">
+            </ion-thumbnail>
+            <h2>Marty McFly</h2>
+            <p>39 Mba  street ajegunle apapa</p>
+          </ion-item>
+
+          <ion-row>
+            <ion-col class="time_box"><p>Time : 8:30 PM</p></ion-col>
+            <ion-col class="time_box"><p>Price : $300</p></ion-col>
+            <ion-col no-padding text-right>
+                <ion-buttons (click)="feedback_btn()">
+                  <button large ion-button class="feedback_btn shadow">
+                    Provide Feedback
+                  </button>
+                </ion-buttons>
+          </ion-col>
+          </ion-row>
+      </ion-card>
+
+      <ion-card no-margin margin-bottom padding class="resto-list">
+
+        <div text-right class="time_box">
+          <p>4 Weeks Ago</p>
+      </div>
+
+          <ion-item no-padding>
+            <ion-thumbnail item-start class="resto_img">
+              <img src="assets/img/order-img.png">
+            </ion-thumbnail>
+            <h2>Marty McFly</h2>
+            <p>39 Mba  street ajegunle apapa</p>
+          </ion-item>
+
+          <ion-row>
+            <ion-col class="time_box"><p>Time : 8:30 PM</p></ion-col>
+            <ion-col class="time_box"><p>Price : $300</p></ion-col>
+            <ion-col no-padding text-right>
+                <ion-buttons>
+                  <button large ion-button class="feedback_btn shadow">
+                    Provide Feedback
+                  </button>
+                </ion-buttons>
+          </ion-col>
+          </ion-row>
+      </ion-card>
+
+
+</ion-content>

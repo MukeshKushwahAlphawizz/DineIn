@@ -1,0 +1,25 @@
+page-request-sent-modal {
+  .modal {
+    background: white;
+    max-width: 280px;
+    border-radius: 20px;
+    width: 80vw;
+    margin: 80pt auto;
+    box-shadow: 0 16px 20px rgba(0, 0, 0, .4);
+    color: black;
+  }
+  .content {
+    background-color: #00000070;
+  }
+  .main{
+    border-radius: 10px;
+  }
+  .send-icon{
+    font-size: 5rem;
+    color: white;
+    background: #D6DB46;
+    border-radius: 50%;
+    padding: 10pt 17pt;
+    margin-top: -50pt;
+  }
+}

@@ -1,0 +1,81 @@
+<ion-icon class="back-arrow text-black" (click)="back()" name="md-arrow-back"></ion-icon>
+<ion-content class="main-bg">
+  <div padding>
+    <div padding-left class="text-lime login-title"><h1>Create An Account</h1></div>
+    <form [formGroup]="signUpForm" padding>
+      <ion-list>
+        <ion-item no-padding class="transparent">
+          <ion-label floating><ion-icon no-margin name="md-person" class="user-icon"></ion-icon><span class="left-margin">Full Name</span></ion-label>
+          <ion-input formControlName="fullName" type="text"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.fullName">
+            <div class="error-message" *ngIf="signUpForm.get('fullName').hasError(error.type) &&
+                (signUpForm.get('fullName').dirty || signUpForm.get('fullName').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item no-padding class="transparent">
+          <ion-label floating><ion-icon name="call"></ion-icon><span class="left-margin">Mobile No.</span></ion-label>
+          <ion-input formControlName="mobileNumber" type="number"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.mobileNumber">
+            <div class="error-message"
+                 *ngIf="signUpForm.get('mobileNumber').hasError(error.type) && (signUpForm.get('mobileNumber').dirty || signUpForm.get('mobileNumber').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item no-padding class="transparent">
+          <ion-label floating class="text-black"><ion-icon name="mail"></ion-icon><span class="left-margin">Email</span></ion-label>
+          <ion-input formControlName="email" type="text"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.email">
+            <div class="error-message" *ngIf="signUpForm.get('email').hasError(error.type) &&
+                (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item no-padding class="transparent">
+          <ion-label floating><ion-icon name="md-lock" class="password"></ion-icon><span class="left-margin">Password</span></ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-message"
+                 *ngIf="signUpForm.get('password').hasError(error.type) && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item no-padding class="transparent">
+          <ion-label floating><ion-icon name="md-lock" class="password"></ion-icon><span class="left-margin">Confirm Password</span></ion-label>
+          <ion-input formControlName="confirmPassword" type="password"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.confirmPassword">
+            <div class="error-message"
+                 *ngIf="signUpForm.get('confirmPassword').hasError(error.type) && (signUpForm.get('confirmPassword').dirty || signUpForm.get('confirmPassword').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <div style="margin: 20pt" padding text-center>
+          <button [disabled]="signUpForm.invalid" (click)="signUp()" ion-button block class="btn-border">Sign UP</button>
+        </div>
+      </ion-list>
+    </form>
+    <div text-center>
+      <p>Already have An Account <span (click)="back()" margin-bottom class="bold text-lime">Sign in</span></p>
+    </div>
+  </div>
+</ion-content>

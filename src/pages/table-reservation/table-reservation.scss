@@ -1,0 +1,43 @@
+page-table-reservation {
+    .booking_form p {
+        font-weight: bold;
+        margin: 25pt 0px 20pt;
+    }
+    .booking_form .input { 
+        border: 1px solid #757575;
+        border-radius: 6px;
+    }
+    .input-fileld .label {
+        position: absolute;
+        top: -7pt; 
+        background: #fff;
+        left: 7pt;
+        z-index: 999;
+        padding: 0pt 3pt;
+    }
+    .input-fileld {
+        position: relative;
+        margin-bottom: 20pt;
+    }
+    .total .item>div {
+        font-size: 15pt;
+        font-weight: bold;
+    }     
+    .item{
+        background: transparent;
+        font-size: 1.2rem;
+        min-height: 3rem;
+        font-weight: 500;
+    }
+    .total .item>div {
+        font-size: 15pt;
+        font-weight: bold;
+    } 
+    .boking_amt {
+        border-bottom: 1px solid #ccc;
+        margin-top: 30pt;
+    }
+    .items_list {
+        background: #EDEFAD;
+    }   
+}

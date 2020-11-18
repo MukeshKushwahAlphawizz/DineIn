@@ -1,0 +1,212 @@
+
+<ion-header class="header top-header">
+
+    <ion-navbar>
+      <div class="feedback_btn" padding-right (click)="feedback_btn()">
+        <img src="assets/img/feedback.png">
+      </div>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding class="resto_details">
+    <h3 class="bold">Ajegunle Finest chao!</h3>
+    <p class="text-grey">39 Mba Street Ajegunle Apapa</p>
+  <ion-row>
+    <ion-item no-lines no-padding>
+      <ionic3-star-rating item-left activeIcon = "ios-star" defaultIcon = "ios-star-outline" activeColor = "#F5C700" defaultColor = "grey"
+                          readonly="true"
+                          rating="4">
+      </ionic3-star-rating>
+      <p no-margin class="text-black">(295 Reviews)</p>
+      <p item-right no-margin class="text-black">Open 8:00 AM To 11:00 PM</p>
+    </ion-item>
+  </ion-row>
+
+  <h5>Photos</h5>
+  <ion-slides pager margin-top class="menu-img">
+
+    <ion-slide>
+      <img class="slide-img" src="assets/img/food1.png">
+    </ion-slide>
+
+    <ion-slide>
+      <img class="slide-img" src="assets/img/food2.png">
+    </ion-slide>
+
+    <ion-slide>
+      <img class="slide-img" src="assets/img/food3.png">
+    </ion-slide>
+
+  </ion-slides>
+
+    <ion-card no-margin margin-top>
+      <ion-item (click)="category1 === 1 ? category1 = 0 : category1 = 1">
+          Starters
+        <ion-icon style="float: right" slot="end" [name]="isRemainder? 'ios-arrow-up' : 'ios-arrow-down'"></ion-icon>
+      </ion-item>
+
+    </ion-card>
+    <div [hidden]="!category1" class="sub-menu">
+
+        <ion-card no-margin margin-top >
+          <ion-list>
+              <ion-item >
+                        <ion-thumbnail item-start>
+                          <img src="assets/img/Group-3.png">
+                        </ion-thumbnail>
+                        <div>
+                        <h2>Herb and Garlic Sourdough</h2>
+                        <p class="text-grey">Sourdough loaf with herb and garlic butter topped with polenta (vegan friendly).</p>
+                        <ion-row class="price">
+                        <ion-col no-padding>$8.50</ion-col>
+                        <ion-col no-padding text-right>
+                            <div class="quantity">
+                              <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-add"></ion-icon></button>
+                              <ion-item no-padding>
+                                  <ion-input type="number" placeholder="0" value="0"></ion-input>
+                                </ion-item>
+                              <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-remove"></ion-icon></button>
+                          </div>
+                        </ion-col>
+                      </ion-row>
+                      </div>
+              </ion-item>
+            </ion-list>
+        </ion-card>
+
+        <ion-card no-margin margin-top >
+            <ion-list>
+                <ion-item >
+                          <ion-thumbnail item-start>
+                            <img src="assets/img/Group-2.png">
+                          </ion-thumbnail>
+                          <div>
+                          <h2>Herb and Garlic Sourdough</h2>
+                          <small class="text-grey">Sourdough loaf with herb and garlic butter topped with polenta (vegan friendly).</small>
+                          <ion-row class="price">
+                          <ion-col no-padding>$8.50</ion-col>
+                          <ion-col no-padding text-right>
+                              <div class="quantity">
+                                <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-add"></ion-icon></button>
+                                <ion-item no-padding>
+                                    <ion-input type="number" placeholder="0" value="0"></ion-input>
+                                  </ion-item>
+                                <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-remove"></ion-icon></button>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        </div>
+                </ion-item>
+              </ion-list>
+          </ion-card>
+
+          <ion-card no-margin margin-top >
+              <ion-list>
+                  <ion-item >
+                            <ion-thumbnail item-start>
+                              <img src="assets/img/Group-1.png">
+                            </ion-thumbnail>
+                            <div>
+                            <h2>Herb and Garlic Sourdough</h2>
+                            <small class="text-grey">Sourdough loaf with herb and garlic butter topped with polenta (vegan friendly).</small>
+                            <ion-row class="price">
+                            <ion-col no-padding>$8.50</ion-col>
+                            <ion-col no-padding text-right>
+                                <div class="quantity">
+                                  <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-add"></ion-icon></button>
+                                  <ion-item no-padding>
+                                      <ion-input type="number" placeholder="0" value="0"></ion-input>
+                                    </ion-item>
+                                  <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-remove"></ion-icon></button>
+                              </div>
+                            </ion-col>
+                          </ion-row>
+                          </div>
+                  </ion-item>
+                </ion-list>
+            </ion-card>
+    </div>
+
+    <ion-card no-margin margin-top>
+        <ion-item (click)="category2 === 1 ? category2 = 0 : category2 = 1">
+            Upper Crust Pizzas
+          <ion-icon style="float: right" slot="end" [name]="isRemainder? 'ios-arrow-up' : 'ios-arrow-down'"></ion-icon>
+        </ion-item>
+
+    </ion-card>
+
+      <div [hidden]="!category2" class="sub-menu">
+          <ion-card no-margin margin-top>
+            <ion-list>
+                <ion-item >
+                          <ion-thumbnail item-start>
+                            <img src="assets/img/Group-2.png">
+                          </ion-thumbnail>
+                          <div>
+                          <h2>Herb and Garlic Sourdough</h2>
+                          <small class="text-grey">Sourdough loaf with herb and garlic butter topped with polenta (vegan friendly).</small>
+                          <ion-row class="price">
+                          <ion-col no-padding>$8.50</ion-col>
+                          <ion-col no-padding text-right>
+                              <div class="quantity">
+                                <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-add"></ion-icon></button>
+                                <ion-item no-padding>
+                                    <ion-input type="number" placeholder="0" value="0"></ion-input>
+                                  </ion-item>
+                                <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-remove"></ion-icon></button>
+                            </div>
+                          </ion-col>
+                        </ion-row>
+                        </div>
+                </ion-item>
+              </ion-list>
+          </ion-card>
+      </div>
+
+      <ion-card no-margin margin-top>
+          <ion-item (click)="category3 === 1 ? category3 = 0 : category3 = 1">
+              Chicken Pizzas
+            <ion-icon style="float: right" slot="end" [name]="isRemainder? 'ios-arrow-up' : 'ios-arrow-down'"></ion-icon>
+          </ion-item>
+
+        </ion-card>
+        <div [hidden]="!category3" class="sub-menu">
+            <ion-card no-margin margin-top >
+              <ion-list>
+                  <ion-item >
+                            <ion-thumbnail item-start>
+                              <img src="assets/img/Group-3.png">
+                            </ion-thumbnail>
+                            <div>
+                            <h2>Herb and Garlic Sourdough</h2>
+                            <small class="text-grey">Sourdough loaf with herb and garlic butter topped with polenta (vegan friendly).</small>
+                            <ion-row class="price">
+                            <ion-col no-padding>$8.50</ion-col>
+                            <ion-col no-padding text-right>
+                                <div class="quantity">
+                                  <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-add"></ion-icon></button>
+                                  <ion-item no-padding>
+                                      <ion-input type="number" placeholder="0" value="0"></ion-input>
+                                    </ion-item>
+                                  <button small ion-button color="light" class="transparent-btn"> <ion-icon name="md-remove"></ion-icon></button>
+                              </div>
+                            </ion-col>
+                          </ion-row>
+                          </div>
+                  </ion-item>
+                </ion-list>
+            </ion-card>
+        </div>
+
+</ion-content>
+
+  <ion-footer>
+      <ion-grid no-padding>
+          <ion-row class="BookingBtn">
+                  <ion-col  no-padding class="Pay_btn">
+                    <button full ion-button no-margin class="background-lime" (click)="table_book()">Table Book</button>
+                  </ion-col>
+          </ion-row>
+        </ion-grid>
+  </ion-footer>

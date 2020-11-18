@@ -1,0 +1,48 @@
+<ion-icon class="back-arrow text-black" (click)="back()" name="md-arrow-back"></ion-icon>
+<ion-content class="main-bg">
+  <div padding>
+    <div padding-left padding-right class="text-lime login-title"><h1>Guest login</h1></div>
+    <form [formGroup]="loginForm" padding>
+      <ion-list>
+        <ion-item no-padding class="transparent">
+          <ion-label floating class="text-black"><ion-icon name="md-person" class="user-icon"></ion-icon><span class="left-margin">Email</span></ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.email">
+            <div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) &&
+                (loginForm.get('email').dirty || loginForm.get('email').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item no-padding class="transparent">
+          <ion-label floating><ion-icon name="md-lock" class="password"></ion-icon><span class="left-margin">Password</span></ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <div>
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-message"
+                 *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+              {{ error.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <div padding-top padding-bottom class="sign-btn">
+          <div text-right class="small-text forgot-pass" (click)="Forgot_pass()">Forgot Password?</div>
+          <button [disabled]="loginForm.invalid" (click)="signIn()" ion-button block class="btn-border">Sign In</button>
+        </div>
+      </ion-list>
+    </form>
+    <div text-center class="social-div">
+      <p>Or Connect Using</p>
+      <span><img class="social-icon" src="assets/img/fb-btn.png"></span>
+      <span><img class="social-icon" src="assets/img/google-btn.png"></span>
+    </div>
+    <div text-center padding-top class="Register_text">
+      <p class="">You Don't Have An Account? <span (click)="signUp()" margin-bottom class="bold text-lime">Sign Up</span></p>
+    </div>
+  </div>
+</ion-content>

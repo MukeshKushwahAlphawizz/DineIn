@@ -1,0 +1,40 @@
+page-my-order {   
+    .my-order .card{
+        width: 100%;
+        padding: 8px;
+    }
+    .my-order .button {
+        font-size: 9px;
+        font-weight: normal;
+        text-transform: capitalize;
+    }    
+    .my-order h2 {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .my-order img {
+        border-radius: 6px;
+    }    
+    .ongoing {
+        border: 1px solid #6EDB46;
+    }
+    .feedback_btn{
+        background:#7DDB46;
+        border-radius: 6px;
+    }
+    .open_tbl{
+        background:#26975A;
+    }
+    .time_box p {
+        font-size: 8pt;
+        font-weight: 500;
+    }
+    .resto_img {
+        min-width: 65px;
+        max-width: 65px;
+        height: auto;
+    }        
+    .resto-list .item .resto_img {
+        margin-top: 0px;
+    }
+}

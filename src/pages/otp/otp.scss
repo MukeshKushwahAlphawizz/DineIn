@@ -1,0 +1,36 @@
+page-otp {
+    .otp_box h2{
+        font-style: italic;
+        font-weight: bold;
+    }
+    .otp-input-row {
+        text-align: center;
+        display: inherit;
+    }
+    .otp-round {
+        margin: 5pt 6pt;
+        display: inline-block;
+    } 
+    .otp-input {
+        border: none;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        border-bottom: 2px solid #dcdcdc;
+        font-size: 18pt;
+        font-weight: bold;
+    }     
+    .otp_box .otp-input-row {
+        padding: 20pt 0pt 40pt;
+    }    
+    .otp_box h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+    }        
+    .otp_box p {
+        font-size: 1.6rem;
+    }    
+    .lime_btn {
+        text-transform: capitalize;
+    }
+}   

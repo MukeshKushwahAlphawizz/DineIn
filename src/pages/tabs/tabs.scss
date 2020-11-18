@@ -1,0 +1,13 @@
+page-tabs {    
+    .bottom-tabs .tabbar {
+        background: #000000;
+    }
+    .bottom-tabs .tab-button[aria-selected=true],
+    .bottom-tabs .tab-button[aria-selected=true] .tab-button-icon {
+        color: #D6DB46;
+    }
+    .bottom-tabs .tab-button,
+    .bottom-tabs .tab-button .tab-button-icon {
+        color: #ffffff;
+    }
+} 

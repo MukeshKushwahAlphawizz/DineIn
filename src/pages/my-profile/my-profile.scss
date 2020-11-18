@@ -1,0 +1,66 @@
+page-my-profile {      
+    .user_dtls {
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, #F8F8F8 0%, #F8F8F8 40%, #D6DB46 40%, #D6DB46 100%);
+    }
+    .user_dtls .card {
+        margin-top: 0px;
+    }
+    .user_dtls .item {
+        padding: 6pt 10pt;
+    }
+    .user_dtls button.text-lime {
+        margin: 0px !important;
+        height: 25px;
+        font-size: 12pt;
+    }        
+    .user_dtls .item ion-thumbnail {
+        max-width: 65px;
+        max-height: 65px;
+        min-width: 65px;
+        min-height: 65px;
+    }
+    .user_dtls .item img{
+        width: 100%;
+        height: auto;
+    }
+    .dtls_list img{
+        width: 7pt;
+    }
+    .text-fb{
+        color: #475993;
+    }
+    .user_dtls h2.bold {
+        font-weight: bold;
+        display: inline-flex;
+    }    
+    .bold.item {
+        border-bottom: 1px solid #ccc;
+        padding-left:0px;
+    }
+    .my-profile .item-block .item-inner {
+        padding: 0px;
+    }
+    .card {
+        width: auto;
+    }        
+    .list .fb_icn.item .item-inner {
+        margin: 0px;
+    }
+    .text-lime {
+        color: #D6DB46;
+        font-size: 17pt;
+        margin:0px 8pt 0px 0pt;
+    }
+    .my-profile {
+        background: #F8F8F8;
+    }    
+    .button-clear-md-danger {
+        color: #BB1818;
+        font-weight: bold;
+        text-transform: capitalize;
+    }    
+    .text-lime.ion-md-document {
+        margin: 0px 11pt 0px 0pt;
+    }
+}

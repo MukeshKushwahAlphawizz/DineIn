@@ -1,0 +1,50 @@
+page-reviews {
+    .item-input .label {
+        color: #000;
+    }
+    .rating-star {
+      .ionic3-star-rating[_ngcontent-c0] .button[_ngcontent-c0]{
+        height: 24px !important;width: 24px !important;
+        margin: 0;
+        ion-icon{
+          font-size: 24px !important;
+          padding: 0;
+        }
+      }
+    }
+    .rating-box{
+        margin-top: 50pt;
+    }
+    .rating-star .icon {
+        font-size: 20pt;
+    }
+    .main-bg .item-block {
+        align-items: inherit;
+    }
+    .main-bg .item-block p {
+        margin-top: 10px;
+        font-size: 10pt;
+        color: #000;
+    }
+    .main-bg .item h2 {
+        font-weight: bold;
+    }
+    .main-bg .item-block p.small-text {
+        font-weight: 500;
+        color: #9B9B9B;
+        margin: 0px;
+        font-size: 9pt;
+    }
+    .main-bg .transparent .label {
+        color: #D6DB46;
+        font-size: 11pt;
+    }
+    .main-bg .transparent .item-inner {
+        border-bottom: 1px solid #D6DB46;
+    }
+    .main-bg .transparent input {
+        font-weight: bold;
+        color: #000;
+    }
+
+}

@@ -1,0 +1,25 @@
+page-payment {    
+    .item .radio[item-start] {
+        margin-right: 10px;
+    }
+    .card {
+            margin-left: 0px;
+            width: 100%;
+    }
+    .card  .radio-checked {
+        border-color: #D6DB46;
+    }
+    .card  .radio-inner {
+        background-color: #D6DB46;
+    }
+    .item-radio-checked.item-md ion-label {
+        color: #D6DB46;
+    }
+    
+.btn-border img {
+    width: 24px;
+}
+.footer-md::before {
+    background-image: none;
+}
+}

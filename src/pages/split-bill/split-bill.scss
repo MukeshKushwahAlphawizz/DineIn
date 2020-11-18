@@ -1,0 +1,41 @@
+page-split-bill {
+    .top-header .toolbar-background, .show-bill {
+        background: #D6DB46;
+        box-shadow: none;
+    }
+    .top-header .title .toolbar-title-md {
+        color: #fff;
+    }        
+    .order-no {
+        background: #d5da4482;
+    } 
+    .item{
+        background: transparent;
+    }
+    .split-bill-box div {
+        font-size: 10pt;
+    }    
+    .sub-total {
+        background: #d5da4447;
+    }
+    .total {
+        background: #D8D8D8;
+        padding: 6px 0px;
+    }
+    .split-bill-box .total div {
+        font-size: 13pt;
+        font-weight: 600;
+        font-style: italic;
+    }      
+    .split-bill-box h3, .split-bill-box h2 {
+        font-style: italic;
+        font-weight: bold;
+    } 
+    .split-bill-box h2 {
+        font-size: 2.1em;
+    }
+    .show-bill {
+        text-transform: capitalize;
+    }
+}
+ 

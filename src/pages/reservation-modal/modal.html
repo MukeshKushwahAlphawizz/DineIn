@@ -1,0 +1,26 @@
+<ion-content no-padding>
+    <div class="modal Reservation-popup">
+        <ion-header class="header top-header">
+     
+            <ion-navbar>
+
+                <ion-buttons>
+                    <button ion-button (click)="cancelRide()">
+                        <img src="assets/img/left-arrow.png"> Back
+                    </button>
+                  </ion-buttons> 
+
+                   <ion-buttons right class="feedback_btn" (click)="feedback_btn()">
+                    <button  ion-button icon-only light>
+                        <img src="assets/img/feedback.png">
+                    </button>
+                  </ion-buttons> 
+
+            </ion-navbar>
+          </ion-header>
+          
+        <ion-footer padding margin-bottom>
+          <div><button class="lime_btn" full ion-button (click)="Reservation()">Reservation</button></div>
+        </ion-footer>
+    </div>
+</ion-content>

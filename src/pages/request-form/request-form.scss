@@ -1,0 +1,15 @@
+page-request-form {
+    .main-bg .item-block .item-inner {
+        border-bottom: 1px solid #D6DB46;
+    }
+    .item-input .label {
+        color: #D6DB46;
+    }
+    .lime_btn{
+        margin-top: 100pt;
+    }
+    .item-input ion-input, .item-input ion-input::placeholder{
+        font-weight: 600;
+        color: #000;
+    }
+}
